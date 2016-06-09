@@ -1,3 +1,8 @@
 :root {
-    --primary-color: #FF7F27;
+    --color-primary: #FF7F27;
+    --color-highlight: #AD4600;
+    --bg-color-footer: #F7F7F7;
+
+    --transition-duration: 0.3s;
+    --transition-function: ease;
 }

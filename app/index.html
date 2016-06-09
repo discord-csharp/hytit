@@ -13,6 +13,9 @@
 </head>
 
 <body>
+    <header ng-include="'widgets/header/header.html'"></header>
+    <main ui-view></main>
+    <div ng-include="'widgets/footer/footer.html'"></div>
 
     <script src="libs/js/jquery.js"></script>
     <script src="libs/js/tether.js"></script>
@@ -22,6 +25,10 @@
 
     <script src="core/core.module.js"></script>
     <script src="common/common.module.js"></script>
+    <script src="widgets/header/header.module.js"></script>
+    <script src="widgets/header/header.controller.js"></script>
+    <script src="task/task.module.js"></script>
+    <script src="task/tasks.controller.js"></script>
 </body>
 
 </html>
