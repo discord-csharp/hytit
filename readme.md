@@ -3,8 +3,8 @@
 ### Setup:
 
 ```
-git clone [https://github.com/discord-csharp/hyt-it.git]
-cd hyt-it
+git clone https://github.com/discord-csharp/hytit.git
+cd hytit
 npm install
 bower install
 gulp dev
