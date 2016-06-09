@@ -54,5 +54,5 @@ gulp.task('watch', function () {
     gulp.watch(paths.source, ['reload']);
 });
 
-gulp.task('dev', ['dev:js', 'dev:css', 'connect', 'watch']);
-gulp.task('default', ['dev', 'fonts']);
+gulp.task('dev', ['dev:js', 'dev:css', 'fonts', 'connect', 'watch']);
+gulp.task('default', ['dev']);
