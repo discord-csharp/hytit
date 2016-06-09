@@ -1,5 +1,7 @@
 var gulp = require('gulp'),
-    connect = require('gulp-connect');
+    connect = require('gulp-connect'),
+    open = require('gulp-open'),
+    os = require('os');
 
 var paths = {
     js: [
@@ -54,5 +56,10 @@ gulp.task('watch', function () {
     gulp.watch(paths.source, ['reload']);
 });
 
-gulp.task('dev', ['dev:js', 'dev:css', 'fonts', 'connect', 'watch']);
+gulp.task('browser', function () {
+    gulp.src(__filename)
+        .pipe(open({ uri: 'http://localhost:8080' }));
+});
+
+gulp.task('dev', ['dev:js', 'dev:css', 'fonts', 'connect', 'watch', 'browser']);
 gulp.task('default', ['dev']);
