@@ -1,7 +1,9 @@
 var gulp = require('gulp'),
     connect = require('gulp-connect'),
     open = require('gulp-open'),
-    os = require('os');
+    os = require('os'),
+    eslint = require('gulp-eslint'),
+    sequence = require('gulp-sequence');
 
 var paths = {
     js: [
@@ -61,5 +63,12 @@ gulp.task('browser', function () {
         .pipe(open({ uri: 'http://localhost:8080' }));
 });
 
+gulp.task('lint', function () {
+    return gulp.src(['./app/**/*.js'])
+        .pipe(eslint())
+        .pipe(eslint.format())
+        .pipe(eslint.failAfterError());
+});
+
 gulp.task('dev', ['dev:js', 'dev:css', 'fonts', 'connect', 'watch', 'browser']);
-gulp.task('default', ['dev']);
+gulp.task('default', sequence('lint', ['dev']));
