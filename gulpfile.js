@@ -70,5 +70,5 @@ gulp.task('lint', function () {
         .pipe(eslint.failAfterError());
 });
 
-gulp.task('dev', ['dev:js', 'dev:css', 'fonts', 'connect', 'watch', 'browser']);
-gulp.task('default', sequence('lint', ['dev']));
+gulp.task('dev', sequence('lint', ['dev:js', 'dev:css', 'fonts', 'connect', 'watch', 'browser']));
+gulp.task('default', ['dev']);
