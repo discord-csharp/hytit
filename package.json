@@ -1,0 +1,11 @@
+{
+  "name": "hytit",
+  "version": "0.0.1",
+  "scripts": {},
+  "license": "ISC",
+  "author": "@mariocatch <mariocatch@gmail.com>",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-connect": "^4.0.0"
+  }
+}
