@@ -23,7 +23,8 @@ var paths = {
     ],
     source: [
         './app/**/*.html',
-        './app/**/*.js'
+        './app/**/*.js',
+        './assets/css/*.css',        
     ]
 }
 
