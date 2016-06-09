@@ -1,16 +1,17 @@
-# Hold You To It
+## Hold You To It (Hyt.It)
 
-## Setup
+### Setup:
 
 ```
+git clone [https://github.com/discord-csharp/hyt-it.git]
+cd hyt-it
 npm install
 bower install
 gulp dev
--> open browser to http://localhost:8080/
 ```
 
-## Authors
+### Authors:
 
-* [@mario_catch](https://twitter.com/mario_catch)
+mariocach { [github](https://github.com/mariocatch) | [twitter](https://twitter.com/mario_catch) }
 
 *[A Discord C# Community Collaboration](https://discord.gg/0np62rq4o8EMJPIH)*
