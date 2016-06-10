@@ -12,7 +12,8 @@ var paths = {
         'bower_components/tether/dist/js/tether.js',
         'bower_components/bootstrap/dist/js/bootstrap.js',
         'bower_components/angular/angular.js',
-        'bower_components/angular-ui-router/release/angular-ui-router.js'
+        'bower_components/angular-ui-router/release/angular-ui-router.js',
+        'bower_components/angular-bootstrap/ui-bootstrap-tpls.js'
     ],
     css: [
         'bower_components/tether/dist/css/tether.css',
@@ -23,9 +24,9 @@ var paths = {
         'bower_components/font-awesome/fonts/*'
     ],
     source: [
-        './app/**/*.html',
-        './app/**/*.js',
-        './app/**/*.css',
+        './client/**/*.html',
+        './client/**/*.js',
+        './client/**/*.css',
     ]
 }
 

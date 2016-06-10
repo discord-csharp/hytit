@@ -3,6 +3,7 @@
 
     angular.module('hytit', [
         'ui.router',
+        'ui.bootstrap',
 
         'hytit.common',
         'hytit.header',
