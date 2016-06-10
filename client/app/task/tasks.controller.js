@@ -22,7 +22,7 @@
 
             $scope.addTask = function (size) {
                 var modalInstance = $uibModal.open({
-                    animation: $scope.animationsEnabled,
+                    animation: true,
                     templateUrl: 'task/add-task.tpl.html',
                     controller: 'AddTaskController',
                     size: size,

@@ -2,6 +2,7 @@
     'use strict';
 
     angular.module('hytit', [
+        'ngAnimate',
         'ui.router',
         'ui.bootstrap',
 
