@@ -7,18 +7,23 @@
         </div>
         <div class="row">
             <div class="col-md-8 col-md-push-2">
-                <div class="card card-block" ng-class="{'card-inverse card-success': task.completed, 'card-inverse card-danger': task.deleted}"
-                    ng-repeat="task in tasks">
-                    <h4 class="card-title">{{task.title}}</h4>
-                    <p class="card-text">Lorem ipsum.</p>
-                    <a class="card-link" ng-click="completeTask(task)" ng-switch="task.completed === true">
-                        <span ng-switch-when="true">re-open</span>
-                        <span ng-switch-when="false">complete</span>
-                    </a>
-                    <a class="card-link" ng-click="deleteTask(task)" ng-switch="task.deleted === true">
-                        <span ng-switch-when="true">re-open</span>
-                        <span ng-switch-when="false">delete</span>
-                    </a>
+                <div ng-show="tasks">
+                    <div class="text-xs-right">
+                        <button class="btn btn-primary" ng-click="addTask()">Add Task</button>
+                    </div>
+                    <div class="card card-block" ng-class="{'card-inverse card-success': task.completed, 'card-inverse card-danger': task.deleted}"
+                        ng-repeat="task in tasks">
+                        <h4 class="card-title">{{task.title}}</h4>
+                        <p class="card-text">Lorem ipsum.</p>
+                        <a class="card-link" ng-click="completeTask(task)" ng-switch="task.completed === true">
+                            <span ng-switch-when="true">re-open</span>
+                            <span ng-switch-when="false">complete</span>
+                        </a>
+                        <a class="card-link" ng-click="deleteTask(task)" ng-switch="task.deleted === true">
+                            <span ng-switch-when="true">re-open</span>
+                            <span ng-switch-when="false">delete</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>

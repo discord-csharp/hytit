@@ -40,3 +40,13 @@ footer {
 [x-ng-click] {
     cursor: pointer;
 }
+
+input {
+  transition: background-color var(--transition-duration) var(--transition-function);
+  background: white;
+}
+
+input.ng-invalid {
+  background-color: rgba(255,0,0,0.1);
+  color:white;
+}
