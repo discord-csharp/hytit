@@ -1,5 +1,6 @@
 var gulp = require('gulp'),
     connect = require('gulp-connect'),
+    historyApiFallback = require('connect-history-api-fallback'),
     open = require('gulp-open'),
     os = require('os'),
     eslint = require('gulp-eslint'),
@@ -24,7 +25,7 @@ var paths = {
     source: [
         './app/**/*.html',
         './app/**/*.js',
-        './assets/css/*.css',        
+        './assets/css/*.css',
     ]
 }
 
@@ -46,7 +47,11 @@ gulp.task('fonts', function () {
 gulp.task('connect', function () {
     connect.server({
         root: ['app', 'assets'],
-        livereload: true
+        livereload: true,
+
+        middleware: function (connect, opt) {
+            return [historyApiFallback()];
+        }
     });
 });
 

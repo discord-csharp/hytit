@@ -5,6 +5,7 @@
   "license": "ISC",
   "author": "@mariocatch <mariocatch@gmail.com>",
   "devDependencies": {
+    "connect-history-api-fallback": "^1.2.0",
     "gulp": "^3.9.1",
     "gulp-connect": "^4.0.0",
     "gulp-eslint": "^2.0.0",
