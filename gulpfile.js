@@ -25,28 +25,28 @@ var paths = {
     source: [
         './app/**/*.html',
         './app/**/*.js',
-        './assets/css/*.css',
+        './app/**/*.css',
     ]
 }
 
 gulp.task('dev:js', function () {
     return gulp.src(paths.js)
-        .pipe(gulp.dest('assets/libs/js'));
+        .pipe(gulp.dest('libs/js'));
 });
 
 gulp.task('dev:css', function () {
     return gulp.src(paths.css)
-        .pipe(gulp.dest('assets/libs/css'));
+        .pipe(gulp.dest('libs/css'));
 });
 
 gulp.task('fonts', function () {
     return gulp.src(paths.fonts)
-        .pipe(gulp.dest('assets/libs/fonts'));
+        .pipe(gulp.dest('libs/fonts'));
 });
 
 gulp.task('connect', function () {
     connect.server({
-        root: ['app', 'assets'],
+        root: ['./', './client', './client/app'],
         livereload: true,
 
         middleware: function (connect, opt) {
@@ -70,7 +70,7 @@ gulp.task('browser', function () {
 });
 
 gulp.task('lint', function () {
-    return gulp.src(['./app/**/*.js'])
+    return gulp.src(['./client/**/*.js'])
         .pipe(eslint())
         .pipe(eslint.format())
         .pipe(eslint.failAfterError());
