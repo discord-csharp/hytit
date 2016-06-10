@@ -1,7 +1,10 @@
 {
   "name": "hytit",
   "version": "0.0.1",
-  "scripts": {},
+  "scripts": {
+    "start": "node server/server.js"
+  },
+  "main": "server/server.js",
   "license": "ISC",
   "author": "@mariocatch <mariocatch@gmail.com>",
   "devDependencies": {
@@ -11,5 +14,8 @@
     "gulp-eslint": "^2.0.0",
     "gulp-open": "^2.0.0",
     "gulp-sequence": "^0.4.5"
+  },
+  "dependencies": {
+    "express": "^4.13.4"
   }
 }
