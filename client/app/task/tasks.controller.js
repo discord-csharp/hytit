@@ -5,10 +5,12 @@
         .controller('TasksController', ['$scope', '$uibModal', function ($scope, $uibModal) {
             $scope.tasks = [
                 {
-                    title: 'foo'
+                    title: 'foo',
+                    description: 'Lorem ipsum'
                 },
                 {
-                    title: 'bar'
+                    title: 'bar',
+                    description: 'Lorem ipsum'
                 }
             ];
 
@@ -20,28 +22,18 @@
                 task.deleted = !task.deleted;
             };
 
-            $scope.addTask = function (size) {
+            $scope.addTask = function () {
                 var modalInstance = $uibModal.open({
                     animation: true,
-                    templateUrl: 'task/add-task.tpl.html',
-                    controller: 'AddTaskController',
-                    size: size,
-                    resolve: {
-                        tasks: function () {
-                            return $scope.tasks;
-                        }
-                    }
+                    templateUrl: 'task/add-task.html',
+                    controller: 'AddTaskController'
                 });
 
-                modalInstance.result.then(function (selectedItem) {
-                    $scope.selected = selectedItem;
+                modalInstance.result.then(function (task) {
+                    $scope.tasks.push(task);
                 }, function () {
-                    console.log('dismissed');
+                    // Do nothing.
                 });
-            };
-
-            $scope.toggleAnimation = function () {
-                $scope.animationsEnabled = !$scope.animationsEnabled;
             };
         }]);
 })();

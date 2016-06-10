@@ -2,14 +2,11 @@
     'use strict';
 
     angular.module('hytit.task')
-        .controller('AddTaskController', ['$scope', '$uibModalInstance', 'tasks', function ($scope, $uibModalInstance, tasks) {
-            $scope.tasks = tasks;
-            $scope.selected = {
-                task: $scope.tasks[0]
-            };
+        .controller('AddTaskController', ['$scope', '$uibModalInstance', function ($scope, $uibModalInstance) {
+            $scope.task = {};
 
             $scope.ok = function () {
-                $uibModalInstance.close($scope.selected.task);
+                $uibModalInstance.close($scope.task);
             };
 
             $scope.cancel = function () {
