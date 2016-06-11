@@ -11,7 +11,7 @@
                     <div class="text-xs-right">
                         <button class="btn btn-primary" ng-click="addTask()">Add Task</button>
                     </div>
-                    <div class="card card-block" ng-class="{'card-inverse card-success': task.completed, 'card-inverse card-danger': task.deleted}"
+                    <div class="card card-block animate" ng-class="{'card-inverse card-success': task.completed, 'card-inverse card-danger': task.deleted}"
                         ng-repeat="task in tasks">
                         <h4 class="card-title">{{task.title}}</h4>
                         <p class="card-text">Lorem ipsum.</p>
