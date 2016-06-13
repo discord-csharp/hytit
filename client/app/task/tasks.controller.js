@@ -9,20 +9,18 @@
                 activate();
 
                 function activate() {
-                    var promises = [getTasks()];
-                    $q.all(promises).then(function (response) {
-                        // Do nothing.
-                    });
+                    $q.all([getTasks()]).then();
                 }
 
                 function getTasks() {
                     $scope.isLoadingTasks = true;
+
                     return TaskService.getTasks()
                         .then(function (data) {
                             $scope.isLoadingTasks = false;
                             data.forEach(function (task) {
                                 $scope.tasks.push(task);
-                            }, this);
+                            });
                         });
                 }
 

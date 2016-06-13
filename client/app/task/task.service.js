@@ -18,7 +18,7 @@
             }
 
             function addTask(task) {
-                return $http.post(BASE_API_URL + 'tasks')
+                return $http.post(BASE_API_URL + 'tasks', task)
                     .then(function (response) {
                         return response.data;
                     });
