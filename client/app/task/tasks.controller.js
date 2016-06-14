@@ -9,7 +9,7 @@
                 activate();
 
                 function activate() {
-                    $q.all([getTasks()]).then();
+                    $q.all([getTasks()]);
                 }
 
                 function getTasks() {

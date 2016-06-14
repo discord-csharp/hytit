@@ -1,8 +1,14 @@
-<nav class="navbar navbar-dark bg-inverse">
+<nav class="navbar navbar-dark bg-inverse" ng-controller="HeaderController">
     <a class="navbar-brand" ui-sref="list">Hyt.It</a>
     <ul class="nav navbar-nav pull-right">
         <li class="nav-item" ng-class="{active:isNavItemActive('/')}">
             <a class="nav-link" ui-sref="list">Home</a>
+        </li>
+        <li class="nav-item" ng-show="apiMe.error" >
+            <a href class="nav-link" ng-click="login()">Login</a>
+        </li>
+        <li class="nav-item" ng-hide="apiMe.error" >
+            <a href class="nav-link" ng-click="logout()">Logout</a>
         </li>
     </ul>
 </nav>

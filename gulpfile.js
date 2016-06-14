@@ -15,6 +15,7 @@ var paths = {
         'bower_components/angular-animate/angular-animate.js',
         'bower_components/angular-ui-router/release/angular-ui-router.js',
         'bower_components/angular-bootstrap/ui-bootstrap-tpls.js',
+        'bower_components/angular-easyfb/build/angular-easyfb.js'
     ],
     css: [
         'bower_components/tether/dist/css/tether.css',

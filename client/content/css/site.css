@@ -64,3 +64,7 @@ input.ng-invalid {
 .animate.ng-enter.ng-enter-active {
     opacity: 1
 }
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
