@@ -79,7 +79,7 @@ gulp.task('lint', function () {
         .pipe(eslint.failAfterError());
 });
 
-gulp.task('express', sequence('lint', ['dev:js', 'dev:css', 'fonts', 'watch', 'browser'], function () {
+gulp.task('express', sequence('lint', ['dev:js', 'dev:css', 'fonts', 'browser'], function () {
     var server = require('./server/server');
 }));
 
