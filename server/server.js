@@ -45,6 +45,6 @@ app.get('/', function (req, res) {
     res.sendFile(clientPath);
 });
 
-app.listen(port, function () {
+module.exports = app.listen(port, function () {
     console.log('Server running on port ' + port);
 });

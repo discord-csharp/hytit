@@ -57,7 +57,7 @@ gulp.task('connect', function () {
     });
 });
 
-gulp.task('reload', function () {
+gulp.task('reload', ['lint'], function () {
     return gulp.src(paths.source)
         .pipe(connect.reload());
 });
@@ -77,6 +77,10 @@ gulp.task('lint', function () {
         .pipe(eslint.format())
         .pipe(eslint.failAfterError());
 });
+
+gulp.task('express', sequence('lint', ['dev:js', 'dev:css', 'fonts', 'watch', 'browser'], function () {
+    var server = require('./server/server');
+}));
 
 gulp.task('dev', sequence('lint', ['dev:js', 'dev:css', 'fonts', 'connect', 'watch', 'browser']));
 gulp.task('default', ['dev']);
